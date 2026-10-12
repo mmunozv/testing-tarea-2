@@ -1,0 +1,14 @@
+{
+  "id": "scrapy-4",
+  "proyecto": "scrapy",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_contracts.ContractsManagerTest.test_errback"
+  ],
+  "archivos_test": [
+    "tests/test_contracts.py"
+  ],
+  "modulos_test": [
+    "tests/test_contracts.py"
+  ]
+}

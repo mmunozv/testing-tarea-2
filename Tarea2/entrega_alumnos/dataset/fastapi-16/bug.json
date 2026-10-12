@@ -1,0 +1,16 @@
+{
+  "id": "fastapi-16",
+  "proyecto": "fastapi",
+  "python": "3.8.3",
+  "comandos_test": [
+    "pytest tests/test_jsonable_encoder.py::test_encode_model_with_config"
+  ],
+  "archivos_test": [
+    "tests/test_datetime_custom_encoder.py",
+    "tests/test_jsonable_encoder.py"
+  ],
+  "modulos_test": [
+    "tests/test_datetime_custom_encoder.py",
+    "tests/test_jsonable_encoder.py"
+  ]
+}

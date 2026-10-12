@@ -1,0 +1,14 @@
+{
+  "id": "scrapy-31",
+  "proyecto": "scrapy",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_downloadermiddleware_cookies.CookiesMiddlewareTest.test_do_not_break_on_non_utf8_header"
+  ],
+  "archivos_test": [
+    "tests/test_downloadermiddleware_cookies.py"
+  ],
+  "modulos_test": [
+    "tests/test_downloadermiddleware_cookies.py"
+  ]
+}

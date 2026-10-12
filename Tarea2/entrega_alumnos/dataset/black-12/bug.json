@@ -1,0 +1,15 @@
+{
+  "id": "black-12",
+  "proyecto": "black",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_black.BlackTestCase.test_bracket_match"
+  ],
+  "archivos_test": [
+    "tests/data/bracketmatch.py",
+    "tests/test_black.py"
+  ],
+  "modulos_test": [
+    "tests/test_black.py"
+  ]
+}

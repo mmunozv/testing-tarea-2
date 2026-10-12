@@ -1,0 +1,14 @@
+{
+  "id": "scrapy-37",
+  "proyecto": "scrapy",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_http_request.RequestTest.test_url_no_scheme"
+  ],
+  "archivos_test": [
+    "tests/test_http_request.py"
+  ],
+  "modulos_test": [
+    "tests/test_http_request.py"
+  ]
+}

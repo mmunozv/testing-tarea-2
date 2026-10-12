@@ -1,0 +1,14 @@
+{
+  "id": "scrapy-12",
+  "proyecto": "scrapy",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_selector.SelectorTestCase.test_selector_bad_args"
+  ],
+  "archivos_test": [
+    "tests/test_selector.py"
+  ],
+  "modulos_test": [
+    "tests/test_selector.py"
+  ]
+}

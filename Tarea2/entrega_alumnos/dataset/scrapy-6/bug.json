@@ -1,0 +1,14 @@
+{
+  "id": "scrapy-6",
+  "proyecto": "scrapy",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_pipeline_images.ImagesPipelineTestCase.test_convert_image"
+  ],
+  "archivos_test": [
+    "tests/test_pipeline_images.py"
+  ],
+  "modulos_test": [
+    "tests/test_pipeline_images.py"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "scrapy-20",
+  "proyecto": "scrapy",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_spider.SitemapSpiderTest.test_get_sitemap_urls_from_robotstxt"
+  ],
+  "archivos_test": [
+    "tests/test_spider.py"
+  ],
+  "modulos_test": [
+    "tests/test_spider.py"
+  ]
+}

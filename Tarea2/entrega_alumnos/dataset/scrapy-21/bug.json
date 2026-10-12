@@ -1,0 +1,14 @@
+{
+  "id": "scrapy-21",
+  "proyecto": "scrapy",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_downloadermiddleware_robotstxt.RobotsTxtMiddlewareTest.test_robotstxt_immediate_error"
+  ],
+  "archivos_test": [
+    "tests/test_downloadermiddleware_robotstxt.py"
+  ],
+  "modulos_test": [
+    "tests/test_downloadermiddleware_robotstxt.py"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "fastapi-7",
+  "proyecto": "fastapi",
+  "python": "3.8.3",
+  "comandos_test": [
+    "pytest tests/test_multi_body_errors.py::test_jsonable_encoder_requiring_error"
+  ],
+  "archivos_test": [
+    "tests/test_multi_body_errors.py"
+  ],
+  "modulos_test": [
+    "tests/test_multi_body_errors.py"
+  ]
+}

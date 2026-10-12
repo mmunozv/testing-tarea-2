@@ -1,0 +1,17 @@
+{
+  "id": "scrapy-19",
+  "proyecto": "scrapy",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_http_cookies.WrappedRequestTest.test_get_full_url",
+    "python -m unittest -q tests.test_http_cookies.WrappedRequestTest.test_get_host",
+    "python -m unittest -q tests.test_http_cookies.WrappedRequestTest.test_get_type",
+    "python -m unittest -q tests.test_http_cookies.WrappedRequestTest.test_get_origin_req_host"
+  ],
+  "archivos_test": [
+    "tests/test_http_cookies.py"
+  ],
+  "modulos_test": [
+    "tests/test_http_cookies.py"
+  ]
+}

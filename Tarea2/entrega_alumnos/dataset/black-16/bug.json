@@ -1,0 +1,14 @@
+{
+  "id": "black-16",
+  "proyecto": "black",
+  "python": "3.8.3",
+  "comandos_test": [
+    "python -m unittest -q tests.test_black.BlackTestCase.test_symlink_out_of_root_directory"
+  ],
+  "archivos_test": [
+    "tests/test_black.py"
+  ],
+  "modulos_test": [
+    "tests/test_black.py"
+  ]
+}
