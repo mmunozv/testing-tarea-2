@@ -1,0 +1,13 @@
+# Repos de los bugs (se reconstruyen desde BugsInPy) y sus entornos
+Tarea2/entrega_alumnos/dataset/*/repo/
+# Artefactos del agente
+.linea_base.json
+agente/.venv/
+agente/config.env
+Tarea2/entrega_alumnos/agente/.venv/
+Tarea2/entrega_alumnos/agente/config.env
+__pycache__/
+*.pyc
+Tarea2/entrega_alumnos/dataset/*/localizacion.json
+Tarea2/entrega_alumnos/dataset/*/metricas.json
+Tarea2/entrega_alumnos/dataset/*/setup.log
