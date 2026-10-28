@@ -1,0 +1,97 @@
+{
+  "regiones": [
+    {
+      "archivo": "scrapy/http/request/__init__.py",
+      "inicio": 62,
+      "fin": 70,
+      "nombre": "Request._set_url",
+      "origen": "llm",
+      "puntaje": 3.1,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 2.6
+      }
+    },
+    {
+      "archivo": "scrapy/http/request/__init__.py",
+      "inicio": 18,
+      "fin": 19,
+      "nombre": "Request (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "scrapy/http/request/__init__.py",
+      "inicio": 20,
+      "fin": 45,
+      "nombre": "Request.__init__",
+      "origen": "llm",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/http/request/__init__.py",
+      "inicio": 85,
+      "fin": 87,
+      "nombre": "Request.encoding",
+      "origen": "heuristica",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/http/request/__init__.py",
+      "inicio": 77,
+      "fin": 81,
+      "nombre": "Request._set_body",
+      "origen": "heuristica",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/utils/url.py",
+      "inicio": 47,
+      "fin": 73,
+      "nombre": "escape_ajax",
+      "origen": "heuristica",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/utils/python.py",
+      "inicio": 155,
+      "fin": 165,
+      "nombre": "memoizemethod_noargs",
+      "origen": "heuristica",
+      "puntaje": 1.0,
+      "senales": {
+        "cobertura": 0.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/utils/python.py",
+      "inicio": 188,
+      "fin": 205,
+      "nombre": "_getargspec_py23",
+      "origen": "heuristica",
+      "puntaje": 1.0,
+      "senales": {
+        "cobertura": 0.5,
+        "importado_por_test": 0.5
+      }
+    }
+  ],
+  "razon_llm": "El test falla porque pasar la URL '/foo:bar' no lanza un ValueError como se esperaba. La función _set_url es la encargada de validar el esquema de la URL al inicializar la petición y es donde se procesan cadenas como '/foo:bar', siendo invocada desde __init__.",
+  "tests_objetivo_fallan": true
+}
