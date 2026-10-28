@@ -1,4 +1,4 @@
-# Repos de los bugs (se reconstruyen desde BugsInPy) y sus entornos
+# Repos de los bugs (vienen en el zip del curso) y sus entornos (repo/env)
 Tarea2/entrega_alumnos/dataset/*/repo/
 # Artefactos del agente
 .linea_base.json
