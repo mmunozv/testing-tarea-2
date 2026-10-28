@@ -33,7 +33,7 @@ import tiempo
 
 MAX_LINEAS_CODIGO = 450      # líneas de código fuente por prompt (todas las regiones juntas)
 MAX_LINEAS_REGION = 160      # una región más larga se muestra como ventana alrededor del punto caliente
-MAX_INTENTOS = 6
+MAX_INTENTOS = 15           # tope de seguridad; en la práctica manda el tiempo (TIEMPO_MIN_INTENTO)
 TIEMPO_MIN_INTENTO = 25.0    # no empezar un intento si queda menos que esto
 MAX_LINEAS_DATOS = 60        # por archivo de datos de test
 

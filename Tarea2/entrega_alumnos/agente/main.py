@@ -21,6 +21,7 @@ import traceback
 from pathlib import Path
 
 import llm
+import localizador
 import pruebas
 import reparador
 import tiempo
@@ -83,7 +84,13 @@ def main():
 
     resultado = {}
     try:
-        localizacion = localizar(carpeta, info)
+        try:
+            localizacion = localizar(carpeta, info)
+        except Exception:
+            # el localizador falló: se sigue con una localización de respaldo para intentar reparar igual
+            traceback.print_exc()
+            localizacion = {"regiones": localizador._regiones_respaldo(carpeta / "repo", info, ""),
+                            "error": "falló el localizador; regiones de respaldo"}
         estado["localizacion"] = localizacion
         escribir_localizacion(carpeta, localizacion)
         print(f"[main] localización: " + ", ".join(

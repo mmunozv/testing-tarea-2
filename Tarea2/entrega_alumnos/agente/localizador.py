@@ -212,14 +212,19 @@ def _reordenar_con_llm(repo, candidatos, tests_txt, salida):
     texto = llm.generar(prompt, "localizador", temperatura=0.0, max_tokens=512, reserva=60)
     if not texto:
         return None, None
+    datos = {}
     m = re.search(r"\{.*\}", texto, re.S)
     try:
         datos = json.loads(m.group(0)) if m else {}
+        if not isinstance(datos, dict):
+            datos = {}
         ids = [int(x) for x in datos.get("ids", [])]
     except (ValueError, TypeError, AttributeError):
+        datos = {}
         ids = [int(x) for x in re.findall(r"\b(\d+)\b", texto)]   # respuesta mal formada: rescata números
     ids = [i for i in dict.fromkeys(ids) if 0 <= i < min(len(candidatos), MAX_CANDIDATOS_LLM)]
-    return ids[:5], (datos.get("razon") if m and isinstance(datos, dict) else None)
+    razon = datos.get("razon")
+    return ids[:5], (razon if isinstance(razon, str) else None)
 
 
 # --------------------------------------------------------------------------- etapa
@@ -302,7 +307,11 @@ def localizar(carpeta: Path, info: dict) -> dict:
     # (4) el LLM reordena los mejores candidatos
     regiones, razon = [], None
     if candidatos:
-        ids, razon = _reordenar_con_llm(repo, candidatos, tests_txt, res.salida)
+        try:
+            ids, razon = _reordenar_con_llm(repo, candidatos, tests_txt, res.salida)
+        except Exception as e:   # el LLM es una mejora: sin él queda el orden heurístico
+            print(f"[localizador] no se pudo reordenar con el LLM: {e}")
+            ids, razon = None, None
         elegidos = ids or []
         for i in elegidos:
             b, p, d = candidatos[i]
