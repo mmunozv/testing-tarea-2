@@ -392,6 +392,7 @@ def reparar(carpeta: Path, info: dict, localizacion: dict) -> dict:
             print(f"[reparador] intento fallido: {h['problema']}\n{str(h.get('detalle', ''))[:300]}")
             super().append(h)
     historial = Historial()
+    probados = {}   # diff -> intento en que se probó (para no volver a probar lo mismo)
     resultado = {"resuelto": False, "intentos": 0}
     while intento < MAX_INTENTOS and tiempo.restante() > TIEMPO_MIN_INTENTO:
         intento += 1
@@ -431,6 +432,14 @@ def reparar(carpeta: Path, info: dict, localizacion: dict) -> dict:
             _escribir(repo, cambios)
         diff = _diff(repo, list(cambios))
         print(f"[reparador] aplicado en {', '.join(cambios)}:\n{diff}")
+        if diff in probados:
+            # el modelo repitió un cambio que ya falló: no se gasta tiempo en volver a probarlo
+            historial.append({"problema": "este cambio es IDÉNTICO a uno anterior que ya falló; "
+                                          "propone una corrección distinta", "diff": diff})
+            with _lock:
+                _revertir(repo, list(cambios))
+            continue
+        probados[diff] = intento
 
         error = _error_sintaxis(repo, list(cambios))
         if error:

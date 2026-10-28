@@ -129,6 +129,11 @@ def comandos_agrupados(info: dict):
     return [f"{pre} {' '.join(shlex.quote(t) for t in ts)}".strip() for pre, ts in grupos.items()]
 
 
+def _rutas_relativas(salida: str, repo: Path) -> str:
+    """Rutas del repo como relativas (más cortas para el prompt e iguales a las de la localización)."""
+    return salida.replace(str(repo.resolve()) + "/", "")
+
+
 @dataclass
 class Resultado:
     pasa: bool
@@ -142,7 +147,7 @@ def correr_objetivo(repo: Path, info: dict, timeout: float = 90.0) -> Resultado:
     salidas, pasa, agotado = [], True, False
     for cmd in comandos_agrupados(info):
         codigo, out, ag = ejecutar(cmd, repo, tiempo.acotar(timeout, reserva=3))
-        salidas.append(f"$ {cmd}\n{out}")
+        salidas.append(f"$ {cmd}\n{_rutas_relativas(out, repo)}")
         pasa &= codigo == 0
         agotado |= ag
     restaurar_tests(repo)
@@ -231,7 +236,7 @@ def correr_objetivo_con_cobertura(repo: Path, info: dict, dir_tmp: str, timeout:
             nuevo = cmd
         codigo, out, ag = ejecutar(nuevo, repo, tiempo.acotar(timeout, reserva=3),
                                    {"COVERAGE_FILE": datos + "." + str(len(salidas))})
-        salidas.append(f"$ {cmd}\n{out}")
+        salidas.append(f"$ {cmd}\n{_rutas_relativas(out, repo)}")
         pasa &= codigo == 0
         agotado |= ag
     restaurar_tests(repo)
@@ -378,11 +383,34 @@ def modulos_mencionados(salida: str, repo: Path):
     return res
 
 
+RE_AVISO = re.compile(r"\w*Warning: ")
+RE_FRAME_EXTERNO = re.compile(r'File "[^"]*(/env/|/site-packages/|/lib/python3[.\d]*/)[^"]*", line \d+')
+RE_FRAME_PYTEST_EXTERNO = re.compile(r"^\S*(/env/|/site-packages/|/lib/python3[.\d]*/)\S*\.py:\d+")
+
+
+def _limpiar_salida(salida: str) -> str:
+    """Quita el ruido de la salida de los tests: avisos (warnings) y frames de librerías externas
+    o de la biblioteca estándar (con su línea de código). Así lo que queda son los frames del
+    proyecto y del test (dónde falla la aserción) y el mensaje final del error."""
+    res, saltar = [], False
+    for l in salida.splitlines():
+        if saltar:   # línea de código que acompaña a un aviso o a un frame descartado
+            saltar = False
+            if l.startswith(" ") and not l.lstrip().startswith(("File ", "Traceback")):
+                continue
+        if RE_AVISO.search(l) and not l.startswith((" ", "E ")) or l.strip().startswith("warnings.warn"):
+            saltar = True
+            continue
+        if RE_FRAME_EXTERNO.search(l) or RE_FRAME_PYTEST_EXTERNO.match(l):
+            saltar = True
+            continue
+        res.append(l)
+    return "\n".join(res)
+
+
 def recortar_salida(salida: str, max_chars: int = 5000) -> str:
     """Deja lo más informativo de la salida de los tests: los tracebacks y el final."""
-    lineas = [l for l in salida.splitlines()
-              if "DeprecationWarning" not in l and not l.strip().startswith("warnings.warn")]
-    texto = "\n".join(lineas)
+    texto = _limpiar_salida(salida)
     if len(texto) <= max_chars:
         return texto
     # prioriza desde el primer traceback / bloque de fallos
