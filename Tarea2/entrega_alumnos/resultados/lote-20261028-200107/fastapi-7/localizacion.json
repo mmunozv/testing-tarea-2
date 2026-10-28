@@ -1,0 +1,97 @@
+{
+  "regiones": [
+    {
+      "archivo": "fastapi/exception_handlers.py",
+      "inicio": 18,
+      "fin": 23,
+      "nombre": "request_validation_exception_handler",
+      "origen": "llm",
+      "puntaje": 5.0,
+      "senales": {
+        "traceback": 4.5,
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "fastapi/applications.py",
+      "inicio": 136,
+      "fin": 142,
+      "nombre": "FastAPI.__call__",
+      "origen": "heuristica",
+      "puntaje": 3.5,
+      "senales": {
+        "traceback": 3.0,
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "fastapi/applications.py",
+      "inicio": 29,
+      "fin": 29,
+      "nombre": "FastAPI (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "fastapi/applications.py",
+      "inicio": 380,
+      "fin": 426,
+      "nombre": "FastAPI.post",
+      "origen": "heuristica",
+      "puntaje": 2.3,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 0.3,
+        "usado_en_test": 1.5
+      }
+    },
+    {
+      "archivo": "fastapi/routing.py",
+      "inicio": 665,
+      "fin": 712,
+      "nombre": "APIRouter.post",
+      "origen": "heuristica",
+      "puntaje": 2.3,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 0.3,
+        "usado_en_test": 1.5
+      }
+    },
+    {
+      "archivo": "fastapi/exceptions.py",
+      "inicio": 24,
+      "fin": 28,
+      "nombre": "RequestValidationError.__init__",
+      "origen": "heuristica",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "fastapi/utils.py",
+      "inicio": 84,
+      "fin": 85,
+      "nombre": "get_path_param_names",
+      "origen": "heuristica",
+      "puntaje": 0.5,
+      "senales": {
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "fastapi/utils.py",
+      "inicio": 156,
+      "fin": 160,
+      "nombre": "generate_operation_id_for_path",
+      "origen": "heuristica",
+      "puntaje": 0.5,
+      "senales": {
+        "cobertura": 0.5
+      }
+    }
+  ],
+  "razon_llm": "El manejador de excepciones de validación intenta serializar los errores de validación que contienen objetos de tipo Decimal (como en `Decimal('0')`), pero la respuesta JSON estándar no maneja estos objetos directamente sin una codificación previa usando `jsonable_encoder`.",
+  "tests_objetivo_fallan": true
+}

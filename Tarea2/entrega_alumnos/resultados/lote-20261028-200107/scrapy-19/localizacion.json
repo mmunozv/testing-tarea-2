@@ -1,0 +1,112 @@
+{
+  "regiones": [
+    {
+      "archivo": "scrapy/http/cookies.py",
+      "inicio": 118,
+      "fin": 119,
+      "nombre": "WrappedRequest.__init__",
+      "origen": "llm",
+      "puntaje": 3.6,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 2.6,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/http/cookies.py",
+      "inicio": 112,
+      "fin": 117,
+      "nombre": "WrappedRequest (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "scrapy/http/cookies.py",
+      "inicio": 121,
+      "fin": 122,
+      "nombre": "WrappedRequest.get_full_url",
+      "origen": "llm",
+      "puntaje": 7.5,
+      "senales": {
+        "ochiai": 2.0,
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/http/cookies.py",
+      "inicio": 124,
+      "fin": 125,
+      "nombre": "WrappedRequest.get_host",
+      "origen": "llm",
+      "puntaje": 7.5,
+      "senales": {
+        "ochiai": 2.0,
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/http/cookies.py",
+      "inicio": 127,
+      "fin": 128,
+      "nombre": "WrappedRequest.get_type",
+      "origen": "llm",
+      "puntaje": 7.5,
+      "senales": {
+        "ochiai": 2.0,
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/http/cookies.py",
+      "inicio": 145,
+      "fin": 146,
+      "nombre": "WrappedRequest.get_origin_req_host",
+      "origen": "llm",
+      "puntaje": 7.5,
+      "senales": {
+        "ochiai": 2.0,
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/http/request/__init__.py",
+      "inicio": 46,
+      "fin": 47,
+      "nombre": "Request._get_url",
+      "origen": "heuristica",
+      "puntaje": 7.5,
+      "senales": {
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 3.0
+      }
+    },
+    {
+      "archivo": "scrapy/utils/httpobj.py",
+      "inicio": 8,
+      "fin": 14,
+      "nombre": "urlparse_cached",
+      "origen": "heuristica",
+      "puntaje": 4.26,
+      "senales": {
+        "ochiai": 3.46,
+        "cobertura": 0.5,
+        "nombres": 0.3
+      }
+    }
+  ],
+  "razon_llm": "La clase WrappedRequest en scrapy/http/cookies.py envuelve un objeto Request pero no define atributos como full_url, host, type u origin_req_host (o propiedades equivalentes), lo que provoca los errores AttributeError al intentar acceder a ellos como atributos en lugar de métodos. El constructor '__init__' y los métodos de acceso necesitan delegar o mapear estos atributos.",
+  "tests_objetivo_fallan": true
+}

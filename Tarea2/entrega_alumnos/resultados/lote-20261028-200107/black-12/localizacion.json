@@ -1,0 +1,110 @@
+{
+  "regiones": [
+    {
+      "archivo": "black.py",
+      "inicio": 883,
+      "fin": 921,
+      "nombre": "BracketTracker.mark",
+      "origen": "llm",
+      "puntaje": 10.41,
+      "senales": {
+        "traceback": 4.5,
+        "ochiai": 2.31,
+        "cobertura": 0.5,
+        "nombres": 2.6,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "black.py",
+      "inicio": 872,
+      "fin": 882,
+      "nombre": "BracketTracker (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "black.py",
+      "inicio": 1006,
+      "fin": 1032,
+      "nombre": "Line.append",
+      "origen": "llm",
+      "puntaje": 9.18,
+      "senales": {
+        "traceback": 4.27,
+        "ochiai": 2.31,
+        "cobertura": 0.5,
+        "nombres": 1.6,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "black.py",
+      "inicio": 995,
+      "fin": 1005,
+      "nombre": "Line (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "black.py",
+      "inicio": 1426,
+      "fin": 1454,
+      "nombre": "LineGenerator.visit_default",
+      "origen": "llm",
+      "puntaje": 9.34,
+      "senales": {
+        "traceback": 4.04,
+        "ochiai": 2.7,
+        "cobertura": 0.5,
+        "nombres": 1.6,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "black.py",
+      "inicio": 700,
+      "fin": 714,
+      "nombre": "Visitor.visit",
+      "origen": "llm",
+      "puntaje": 8.32,
+      "senales": {
+        "traceback": 3.81,
+        "ochiai": 2.21,
+        "cobertura": 0.5,
+        "nombres": 1.3,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "black.py",
+      "inicio": 1476,
+      "fin": 1495,
+      "nombre": "LineGenerator.visit_stmt",
+      "origen": "heuristica",
+      "puntaje": 8.26,
+      "senales": {
+        "traceback": 2.88,
+        "ochiai": 2.78,
+        "cobertura": 0.5,
+        "nombres": 1.6,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "black.py",
+      "inicio": 716,
+      "fin": 720,
+      "nombre": "Visitor.visit_default",
+      "origen": "heuristica",
+      "puntaje": 8.14,
+      "senales": {
+        "traceback": 3.58,
+        "ochiai": 2.26,
+        "cobertura": 0.5,
+        "nombres": 1.3,
+        "importado_por_test": 0.5
+      }
+    }
+  ],
+  "razon_llm": "El traceback termina con un KeyError en BracketTracker.mark al intentar hacer pop en self.bracket_match, lo que indica que la función mark (id 0) o su gestión previa en append (id 2) y el recorrido del árbol no están emparejando correctamente los paréntesis/corchetes.",
+  "tests_objetivo_fallan": true
+}

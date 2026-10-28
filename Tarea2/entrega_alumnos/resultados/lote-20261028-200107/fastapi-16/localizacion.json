@@ -1,0 +1,51 @@
+{
+  "regiones": [
+    {
+      "archivo": "fastapi/encoders.py",
+      "inicio": 9,
+      "fin": 79,
+      "nombre": "jsonable_encoder",
+      "origen": "llm",
+      "puntaje": 11.6,
+      "senales": {
+        "traceback": 4.5,
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 0.6,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "fastapi/params.py",
+      "inicio": 240,
+      "fin": 272,
+      "nombre": "Form.__init__",
+      "origen": "heuristica",
+      "puntaje": 0.5,
+      "senales": {
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "fastapi/params.py",
+      "inicio": 239,
+      "fin": 239,
+      "nombre": "Form (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "fastapi/params.py",
+      "inicio": 203,
+      "fin": 236,
+      "nombre": "Body.__init__",
+      "origen": "heuristica",
+      "puntaje": 0.5,
+      "senales": {
+        "cobertura": 0.5
+      }
+    }
+  ],
+  "razon_llm": "El traceback muestra claramente que el error (AttributeError: type object 'Config' has no attribute 'json_encoders') ocurre directamente dentro de la función jsonable_encoder en el archivo fastapi/encoders.py en la línea 18.",
+  "tests_objetivo_fallan": true
+}

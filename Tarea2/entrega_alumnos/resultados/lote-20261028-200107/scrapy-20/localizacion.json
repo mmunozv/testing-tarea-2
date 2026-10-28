@@ -1,0 +1,108 @@
+{
+  "regiones": [
+    {
+      "archivo": "scrapy/utils/sitemap.py",
+      "inicio": 37,
+      "fin": 43,
+      "nombre": "sitemap_urls_from_robots",
+      "origen": "llm",
+      "puntaje": 11.9,
+      "senales": {
+        "traceback": 4.5,
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 2.9
+      }
+    },
+    {
+      "archivo": "scrapy/spiders/sitemap.py",
+      "inicio": 33,
+      "fin": 54,
+      "nombre": "SitemapSpider._parse_sitemap",
+      "origen": "llm",
+      "puntaje": 11.9,
+      "senales": {
+        "traceback": 3.0,
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 2.9,
+        "usado_en_test": 1.5
+      }
+    },
+    {
+      "archivo": "scrapy/spiders/sitemap.py",
+      "inicio": 13,
+      "fin": 19,
+      "nombre": "SitemapSpider (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "scrapy/spiders/sitemap.py",
+      "inicio": 20,
+      "fin": 27,
+      "nombre": "SitemapSpider.__init__",
+      "origen": "heuristica",
+      "puntaje": 4.21,
+      "senales": {
+        "ochiai": 1.11,
+        "cobertura": 0.5,
+        "nombres": 2.6
+      }
+    },
+    {
+      "archivo": "scrapy/http/response/__init__.py",
+      "inicio": 33,
+      "fin": 34,
+      "nombre": "Response._get_url",
+      "origen": "heuristica",
+      "puntaje": 3.81,
+      "senales": {
+        "ochiai": 1.41,
+        "cobertura": 0.5,
+        "nombres": 1.9
+      }
+    },
+    {
+      "archivo": "scrapy/http/response/__init__.py",
+      "inicio": 45,
+      "fin": 46,
+      "nombre": "Response._get_body",
+      "origen": "heuristica",
+      "puntaje": 3.73,
+      "senales": {
+        "ochiai": 1.33,
+        "cobertura": 0.5,
+        "nombres": 1.9
+      }
+    },
+    {
+      "archivo": "scrapy/spiders/__init__.py",
+      "inicio": 25,
+      "fin": 32,
+      "nombre": "Spider.__init__",
+      "origen": "heuristica",
+      "puntaje": 3.27,
+      "senales": {
+        "ochiai": 0.97,
+        "cobertura": 0.5,
+        "nombres": 1.3,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/utils/datatypes.py",
+      "inicio": 220,
+      "fin": 221,
+      "nombre": "CaselessDict.get",
+      "origen": "heuristica",
+      "puntaje": 3.13,
+      "senales": {
+        "ochiai": 1.33,
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    }
+  ],
+  "razon_llm": "El error indica un TypeError en 'sitemap_urls_from_robots' al comparar 'bytes' con 'str' usando startswith. La función '_parse_sitemap' es la que la invoca.",
+  "tests_objetivo_fallan": true
+}

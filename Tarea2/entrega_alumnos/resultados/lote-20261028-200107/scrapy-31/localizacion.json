@@ -1,0 +1,112 @@
+{
+  "regiones": [
+    {
+      "archivo": "scrapy/http/cookies.py",
+      "inicio": 173,
+      "fin": 174,
+      "nombre": "WrappedResponse.get_all",
+      "origen": "llm",
+      "puntaje": 8.68,
+      "senales": {
+        "traceback": 3.5,
+        "ochiai": 3.38,
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/http/cookies.py",
+      "inicio": 164,
+      "fin": 165,
+      "nombre": "WrappedResponse (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "scrapy/utils/python.py",
+      "inicio": 123,
+      "fin": 129,
+      "nombre": "to_native_str",
+      "origen": "llm",
+      "puntaje": 7.88,
+      "senales": {
+        "traceback": 4.0,
+        "ochiai": 3.38,
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/utils/python.py",
+      "inicio": 97,
+      "fin": 107,
+      "nombre": "to_unicode",
+      "origen": "llm",
+      "puntaje": 8.38,
+      "senales": {
+        "traceback": 4.5,
+        "ochiai": 3.38,
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/downloadermiddlewares/cookies.py",
+      "inicio": 41,
+      "fin": 51,
+      "nombre": "CookiesMiddleware.process_response",
+      "origen": "heuristica",
+      "puntaje": 11.1,
+      "senales": {
+        "traceback": 2.0,
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 2.6,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/downloadermiddlewares/cookies.py",
+      "inicio": 26,
+      "fin": 39,
+      "nombre": "CookiesMiddleware.process_request",
+      "origen": "heuristica",
+      "puntaje": 8.48,
+      "senales": {
+        "ochiai": 3.38,
+        "cobertura": 0.5,
+        "nombres": 2.6,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/http/cookies.py",
+      "inicio": 17,
+      "fin": 20,
+      "nombre": "CookieJar.extract_cookies",
+      "origen": "heuristica",
+      "puntaje": 8.3,
+      "senales": {
+        "traceback": 2.5,
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/downloadermiddlewares/cookies.py",
+      "inicio": 53,
+      "fin": 59,
+      "nombre": "CookiesMiddleware._debug_cookie",
+      "origen": "heuristica",
+      "puntaje": 6.68,
+      "senales": {
+        "ochiai": 3.38,
+        "cobertura": 0.5,
+        "nombres": 2.3,
+        "importado_por_test": 0.5
+      }
+    }
+  ],
+  "razon_llm": "El error ocurre al intentar convertir cabeceras HTTP con bytes no UTF-8 a cadenas nativas usando to_native_str/to_unicode dentro del método get_all que procesa las cookies de la respuesta.",
+  "tests_objetivo_fallan": true
+}

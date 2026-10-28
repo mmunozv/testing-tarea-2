@@ -1,0 +1,8 @@
+{
+  "bug": "black-16",
+  "modelo": "gemini-3.5-flash-lite",
+  "llamadas": 2,
+  "tokens_entrada": 3262,
+  "tokens_salida": 326,
+  "segundos": 31.9
+}

@@ -1,0 +1,8 @@
+{
+  "bug": "fastapi-16",
+  "modelo": "gemini-3.5-flash-lite",
+  "llamadas": 2,
+  "tokens_entrada": 2761,
+  "tokens_salida": 447,
+  "segundos": 6.5
+}

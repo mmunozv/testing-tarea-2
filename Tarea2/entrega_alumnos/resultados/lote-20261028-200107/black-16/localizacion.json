@@ -1,0 +1,102 @@
+{
+  "regiones": [
+    {
+      "archivo": "black.py",
+      "inicio": 2934,
+      "fin": 2962,
+      "nombre": "gen_python_files_in_dir",
+      "origen": "llm",
+      "puntaje": 9.5,
+      "senales": {
+        "traceback": 4.5,
+        "cobertura": 0.5,
+        "nombres": 2.5,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "blib2to3/pgen2/tokenize.py",
+      "inicio": 49,
+      "fin": 49,
+      "nombre": "any",
+      "origen": "heuristica",
+      "puntaje": 2.3,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 0.3,
+        "usado_en_test": 1.5
+      }
+    },
+    {
+      "archivo": "black.py",
+      "inicio": 2349,
+      "fin": 2361,
+      "nombre": "dont_increase_indentation",
+      "origen": "heuristica",
+      "puntaje": 2.3,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "blib2to3/pgen2/tokenize.py",
+      "inicio": 50,
+      "fin": 50,
+      "nombre": "maybe",
+      "origen": "heuristica",
+      "puntaje": 0.5,
+      "senales": {
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "blib2to3/pgen2/tokenize.py",
+      "inicio": 48,
+      "fin": 48,
+      "nombre": "group",
+      "origen": "heuristica",
+      "puntaje": 0.5,
+      "senales": {
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "blib2to3/pgen2/pgen.py",
+      "inicio": 339,
+      "fin": 340,
+      "nombre": "NFAState.__init__",
+      "origen": "heuristica",
+      "puntaje": 0.5,
+      "senales": {
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "blib2to3/pgen2/pgen.py",
+      "inicio": 384,
+      "fin": 386,
+      "nombre": "generate_grammar",
+      "origen": "heuristica",
+      "puntaje": 0.5,
+      "senales": {
+        "cobertura": 0.5
+      }
+    },
+    {
+      "archivo": "blib2to3/pgen2/tokenize.py",
+      "inicio": 51,
+      "fin": 54,
+      "nombre": "_combinations",
+      "origen": "heuristica",
+      "puntaje": 0.5,
+      "senales": {
+        "cobertura": 0.5
+      }
+    }
+  ],
+  "razon_llm": "El traceback apunta directamente a la línea 2948 en gen_python_files_in_dir donde se llama a relative_to() sin manejar correctamente las rutas fuera de la raíz cuando no son enlaces simbólicos.",
+  "tests_objetivo_fallan": true
+}

@@ -1,0 +1,113 @@
+{
+  "regiones": [
+    {
+      "archivo": "scrapy/contracts/__init__.py",
+      "inicio": 85,
+      "fin": 88,
+      "nombre": "ContractsManager._clean_req.eb_wrapper",
+      "origen": "llm",
+      "puntaje": 11.5,
+      "senales": {
+        "traceback": 4.5,
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 2.0,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/contracts/__init__.py",
+      "inicio": 71,
+      "fin": 91,
+      "nombre": "ContractsManager._clean_req",
+      "origen": "llm",
+      "puntaje": 5.0,
+      "senales": {
+        "ochiai": 2.0,
+        "cobertura": 0.5,
+        "nombres": 2.0,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/contracts/__init__.py",
+      "inicio": 11,
+      "fin": 13,
+      "nombre": "ContractsManager (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "scrapy/contracts/__init__.py",
+      "inicio": 48,
+      "fin": 69,
+      "nombre": "ContractsManager.from_method",
+      "origen": "llm",
+      "puntaje": 6.8,
+      "senales": {
+        "ochiai": 2.0,
+        "cobertura": 0.5,
+        "nombres": 2.3,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/spidermiddlewares/httperror.py",
+      "inicio": 16,
+      "fin": 18,
+      "nombre": "HttpError.__init__",
+      "origen": "heuristica",
+      "puntaje": 5.6,
+      "senales": {
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 0.6,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/contracts/__init__.py",
+      "inicio": 27,
+      "fin": 38,
+      "nombre": "ContractsManager.extract_contracts",
+      "origen": "heuristica",
+      "puntaje": 5.0,
+      "senales": {
+        "ochiai": 2.0,
+        "cobertura": 0.5,
+        "nombres": 2.0,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/contracts/default.py",
+      "inicio": 42,
+      "fin": 57,
+      "nombre": "ReturnsContract.__init__",
+      "origen": "heuristica",
+      "puntaje": 3.61,
+      "senales": {
+        "ochiai": 2.31,
+        "cobertura": 0.5,
+        "nombres": 0.3,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/contracts/__init__.py",
+      "inicio": 149,
+      "fin": 150,
+      "nombre": "Contract.adjust_request_args",
+      "origen": "heuristica",
+      "puntaje": 3.3,
+      "senales": {
+        "ochiai": 2.0,
+        "cobertura": 0.5,
+        "nombres": 0.3,
+        "importado_por_test": 0.5
+      }
+    }
+  ],
+  "razon_llm": "El traceback muestra un error al llamar a results.addError(case, exc_info) dentro de eb_wrapper, donde exc_info (probablemente extraído de failure) pasa un descriptor o un objeto con formato incorrecto, apuntando directamente a cómo se envuelve y maneja el errback y la limpieza de la request.",
+  "tests_objetivo_fallan": true
+}

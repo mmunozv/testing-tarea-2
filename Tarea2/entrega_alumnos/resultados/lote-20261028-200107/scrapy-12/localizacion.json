@@ -1,0 +1,99 @@
+{
+  "regiones": [
+    {
+      "archivo": "scrapy/selector/unified.py",
+      "inicio": 48,
+      "fin": 67,
+      "nombre": "Selector.__init__",
+      "origen": "llm",
+      "puntaje": 4.9,
+      "senales": {
+        "ochiai": 3.1,
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/selector/unified.py",
+      "inicio": 43,
+      "fin": 47,
+      "nombre": "Selector (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "scrapy/http/response/text.py",
+      "inicio": 103,
+      "fin": 105,
+      "nombre": "TextResponse._body_declared_encoding",
+      "origen": "heuristica",
+      "puntaje": 5.4,
+      "senales": {
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 0.9
+      }
+    },
+    {
+      "archivo": "scrapy/http/response/text.py",
+      "inicio": 18,
+      "fin": 21,
+      "nombre": "TextResponse (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "scrapy/http/response/text.py",
+      "inicio": 85,
+      "fin": 93,
+      "nombre": "TextResponse._body_inferred_encoding",
+      "origen": "heuristica",
+      "puntaje": 5.4,
+      "senales": {
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 0.9
+      }
+    },
+    {
+      "archivo": "scrapy/http/response/text.py",
+      "inicio": 56,
+      "fin": 58,
+      "nombre": "TextResponse._declared_encoding",
+      "origen": "heuristica",
+      "puntaje": 5.1,
+      "senales": {
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 0.6
+      }
+    },
+    {
+      "archivo": "scrapy/http/response/text.py",
+      "inicio": 95,
+      "fin": 101,
+      "nombre": "TextResponse._auto_detect_fun",
+      "origen": "heuristica",
+      "puntaje": 5.1,
+      "senales": {
+        "ochiai": 4.0,
+        "cobertura": 0.5,
+        "nombres": 0.6
+      }
+    },
+    {
+      "archivo": "scrapy/http/response/text.py",
+      "inicio": 64,
+      "fin": 73,
+      "nombre": "TextResponse.text",
+      "origen": "heuristica",
+      "puntaje": 4.79,
+      "senales": {
+        "ochiai": 2.19,
+        "cobertura": 0.5,
+        "nombres": 0.6,
+        "usado_en_test": 1.5
+      }
+    }
+  ],
+  "razon_llm": "El test espera que la clase Selector lance un ValueError cuando se le pasa tanto 'response' como 'text'. La función __init__ de Selector (scrapy/selector/unified.py) es la encargada de validar estos argumentos, pero no está lanzando la excepción esperada.",
+  "tests_objetivo_fallan": true
+}

@@ -1,0 +1,100 @@
+{
+  "regiones": [
+    {
+      "archivo": "scrapy/pipelines/images.py",
+      "inicio": 130,
+      "fin": 144,
+      "nombre": "ImagesPipeline.convert_image",
+      "origen": "llm",
+      "puntaje": 5.5,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/pipelines/images.py",
+      "inicio": 34,
+      "fin": 49,
+      "nombre": "ImagesPipeline (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "scrapy/pipelines/images.py",
+      "inicio": 50,
+      "fin": 85,
+      "nombre": "ImagesPipeline.__init__",
+      "origen": "heuristica",
+      "puntaje": 3.3,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 2.3,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/pipelines/media.py",
+      "inicio": 43,
+      "fin": 46,
+      "nombre": "MediaPipeline._handle_statuses",
+      "origen": "heuristica",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/pipelines/files.py",
+      "inicio": 264,
+      "fin": 270,
+      "nombre": "FilesPipeline._get_store",
+      "origen": "heuristica",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/pipelines/media.py",
+      "inicio": 30,
+      "fin": 41,
+      "nombre": "MediaPipeline.__init__",
+      "origen": "heuristica",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/pipelines/media.py",
+      "inicio": 48,
+      "fin": 63,
+      "nombre": "MediaPipeline._key_for_pipe",
+      "origen": "heuristica",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    },
+    {
+      "archivo": "scrapy/pipelines/files.py",
+      "inicio": 226,
+      "fin": 252,
+      "nombre": "FilesPipeline.__init__",
+      "origen": "heuristica",
+      "puntaje": 1.8,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 1.3
+      }
+    }
+  ],
+  "razon_llm": "El test que falla es test_convert_image y el error ocurre directamente al llamar a self.pipeline.convert_image() con una imagen con transparencia (RGBA convertida a P), donde el color resultante no maneja correctamente el canal alfa de fondo blanco.",
+  "tests_objetivo_fallan": true
+}

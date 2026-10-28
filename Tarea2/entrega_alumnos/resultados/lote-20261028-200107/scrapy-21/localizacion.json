@@ -1,0 +1,107 @@
+{
+  "regiones": [
+    {
+      "archivo": "scrapy/downloadermiddlewares/robotstxt.py",
+      "inicio": 48,
+      "fin": 73,
+      "nombre": "RobotsTxtMiddleware.robot_parser",
+      "origen": "llm",
+      "puntaje": 8.5,
+      "senales": {
+        "traceback": 4.5,
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/downloadermiddlewares/robotstxt.py",
+      "inicio": 20,
+      "fin": 22,
+      "nombre": "RobotsTxtMiddleware (cabecera de la clase)",
+      "origen": "clase"
+    },
+    {
+      "archivo": "scrapy/downloadermiddlewares/robotstxt.py",
+      "inicio": 103,
+      "fin": 104,
+      "nombre": "RobotsTxtMiddleware._robots_error",
+      "origen": "llm",
+      "puntaje": 4.0,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/downloadermiddlewares/robotstxt.py",
+      "inicio": 35,
+      "fin": 40,
+      "nombre": "RobotsTxtMiddleware.process_request",
+      "origen": "heuristica",
+      "puntaje": 4.0,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/downloadermiddlewares/robotstxt.py",
+      "inicio": 23,
+      "fin": 29,
+      "nombre": "RobotsTxtMiddleware.__init__",
+      "origen": "heuristica",
+      "puntaje": 4.0,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/downloadermiddlewares/robotstxt.py",
+      "inicio": 75,
+      "fin": 81,
+      "nombre": "RobotsTxtMiddleware._logerror",
+      "origen": "heuristica",
+      "puntaje": 4.0,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 3.0,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/settings/__init__.py",
+      "inicio": 51,
+      "fin": 57,
+      "nombre": "SettingsAttribute.set",
+      "origen": "heuristica",
+      "puntaje": 3.1,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 0.6,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    },
+    {
+      "archivo": "scrapy/settings/__init__.py",
+      "inicio": 234,
+      "fin": 260,
+      "nombre": "BaseSettings.set",
+      "origen": "heuristica",
+      "puntaje": 3.1,
+      "senales": {
+        "cobertura": 0.5,
+        "nombres": 0.6,
+        "usado_en_test": 1.5,
+        "importado_por_test": 0.5
+      }
+    }
+  ],
+  "razon_llm": "El traceback muestra un KeyError en 'site.local' dentro de robot_parser en la línea 65 al intentar acceder a self._parsers[netloc] cuando ocurre un fallo inmediato, lo que indica que el parser no se guardó o se eliminó prematuramente antes de manejar el error.",
+  "tests_objetivo_fallan": true
+}
